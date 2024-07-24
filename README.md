@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# xSpark-QnA-Devs is a platform for developers to learn, share​ ​their programming ​knowledge, publish queries and answers
 
-## Getting Started
+## Built with the Node.js SDK for server and Web SDK for client provided by appwrite back-end APIs & tools for simpler development tasks arround REST APIs
 
-First, run the development server:
+- Node.js
+- Next.js
+- Appwrite
+- TailwindCSS
+- Typescript
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Started with configuring the application and for the client Web SDK intergration with appwrite [- Docs](https://appwrite.io/docs/references/cloud/client-web/account)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## For the server Node.Js SDK to intergrate with appwrite BAAS [- Docs](https://github.com/appwrite/sdk-for-node)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## For various data collections created files in models/server & storage bucket setup funtion file [- Docs](https://github.com/appwrite/sdk-for-node/tree/main/docs/examples)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## For seeding or using existing data collections created function in dbSetup file using databases class instance from appwrite
