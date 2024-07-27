@@ -31,3 +31,9 @@ in useAuthStore custom hook from create function of Zustand for creating store f
 ## Integraing Persist middleware to store Zustand state in a storage localStorage, AsyncStorage [- Docs](https://docs.pmnd.rs/zustand/integrations/persisting-store-data#onrehydratestorage)
 
 thus persisting its data, using an option of onRehydrateStorage, this allows to pass a linear method setHydrated that will be called when the storage is hydrated
+
+## auth folder consisting two routes for login & register, handling by logic in layout file
+
+## login page function process by handleSubmit function extracting & validating the form data, calling the login function from the authentication store, and updating the loading and error states accordingly
+
+## register page function process by validating the form data, calling the createAccount function from the authentication store to create the user account, and then calling the login function to log the user in. It updates the loading and error states accordingly and renders the error message and form
