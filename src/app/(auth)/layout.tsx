@@ -2,10 +2,12 @@
 
 import React from "react";
 import { useAuthStore } from "@/store/Auth";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  // session existance check
+  // check session existance
   const { session } = useAuthStore();
   const router = useRouter();
 
@@ -21,9 +23,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div>
-      <div>
-        {/* register page, login page  */}
-        {children}
+      <div className="relative flex min-h-screen flex-col items-center justify-center py-12">
+        <BackgroundBeams />
+        <div className="relative">{children}</div>
       </div>
     </div>
   );
