@@ -56,8 +56,15 @@ export const useAuthStore = create<IAuthStore>()(
       },
 
       async createAccount(name: string, email: string, password: string) {
+        console.log("createAccount", name, email, password);
         try {
-          account.create(ID.unique(), name, email, password);
+          const response = await account.create(
+            ID.unique(),
+            email,
+            password,
+            name
+          );
+          console.log("response", response);
           return { success: true };
         } catch (error) {
           console.log(error);
@@ -74,10 +81,15 @@ export const useAuthStore = create<IAuthStore>()(
             email,
             password
           );
+
+          console.log("session login Auth ", session);
+
           const [user, { jwt }] = await Promise.all([
             account.get<UserPrefs>(),
             account.createJWT(),
           ]);
+
+          console.log("user login Auth ", user);
 
           if (!user.prefs?.reputation)
             await account.updatePrefs<UserPrefs>({ reputation: 0 });
